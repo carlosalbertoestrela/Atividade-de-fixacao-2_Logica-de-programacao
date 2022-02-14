@@ -29,7 +29,6 @@ function calcula_media_ponderada_2(n1,p1,n2,p2){
     n2 = parseFloat(n2);
     p2 = parseInt(p2);
     let mdp = (calcula_produto(n1,p1) + calcula_produto(n2,p2))/(p1+p2);
-    alert(mdp)
     return mdp.toFixed(2);
 }
 // At5
@@ -76,21 +75,78 @@ let peso2;
 const get_p1 = () =>{ peso1 = prompt("Digite o peso da 1ª prova:");}
 const get_p2 = () =>{ peso2 = prompt("Digite o peso da 2ª prova:");}
 
-function q2(){
-    let at2 = document.querySelector(".at2_answer");
-    let matricula = document.querySelector("#at2_matricula");
-    matricula = matricula.value;
-    let n1 = document.querySelector("#at2_nota1");
-    n1 = n1.value;
-    let n2 = document.querySelector("#at2_nota2");
-    n2 = n2.value;
+function q2_1(){
+    let at2_1 = document.querySelector(".at2_answer_1");
+    let matricula_1 = document.querySelector("#at2_matricula_1");
+    matricula_1 = matricula_1.value;
+    let n1_1 = document.querySelector("#at2_nota1_1");
+    n1_1 = n1_1.value;
+    let n2_1 = document.querySelector("#at2_nota2_1");
+    n2_1 = n2_1.value;
 
-    media_p = calcula_media_ponderada_2(n1,peso1,n2,peso2);
+    media_p1 = calcula_media_ponderada_2(n1_1,peso1,n2_1,peso2);
+    at2_1.innerHTML = `<hr>1º Aluno<br>Matricula do aluno: ${matricula_1} <br> Média Ponderada: <strong>${media_p1}</strong>`
+ 
+}
+function q2_2(){
+    let at2_2 = document.querySelector(".at2_answer_2");
+    let matricula_2 = document.querySelector("#at2_matricula_2");
+    matricula_2 = matricula_2.value;
+    let n1_2 = document.querySelector("#at2_nota1_2");
+    n1_2 = n1_2.value;
+    let n2_2 = document.querySelector("#at2_nota2_2");
+    n2_2 = n2_2.value;
 
-    at2.innerHTML = `<hr>Média ponderada do aluno: ${matricula} <br> <strong>${media_p}</strong>`
+    media_p2 = calcula_media_ponderada_2(n1_2,peso1,n2_2,peso2);
+    at2_2.innerHTML = `<hr>2º Aluno<br>Matricula do aluno: ${matricula_2} <br> Média Ponderada: <strong>${media_p2}</strong>`
+ 
+}
 
+function esconder_botao_1(){
+    let matricula_1 = document.querySelector(".matricula_1");
+    let calc_1 = document.querySelector("#calc_1");
+    let busc_1 = document.querySelector("#busc_1");
+    let aluno_1 = document.querySelector(".aluno_data_1");
+    aluno_1.removeAttribute("hidden");
+    calc_1.removeAttribute("hidden");
+    busc_1.setAttribute("hidden","True");
+    matricula_1.setAttribute("hidden", "True");
+}
 
-    
+function mostrar_botao_1(){
+    let matricula_2 = document.querySelector(".matricula_2");
+    let aluno_1 = document.querySelector(".aluno_data_1");
+    let calc_1 = document.querySelector("#calc_1");
+    let busc_2 = document.querySelector("#busc_2");
+
+    aluno_1.setAttribute("hidden", "True");
+    calc_1.setAttribute("hidden", "True")
+    matricula_2.removeAttribute("hidden")
+    busc_2.removeAttribute("hidden")
+
+}
+function esconder_botao_2(){
+    let matricula_2 = document.querySelector(".matricula_2");
+    let calc_2 = document.querySelector("#calc_2");
+    let busc_2 = document.querySelector("#busc_2");
+    let aluno_2 = document.querySelector(".aluno_data_2");
+
+    aluno_2.removeAttribute("hidden");
+    calc_2.removeAttribute("hidden");
+    busc_2.setAttribute("hidden","True");
+    matricula_2.setAttribute("hidden", "True");
+}
+
+function mostrar_botao_2(){
+    let matricula_1 = document.querySelector(".matricula_1");
+    let aluno_2 = document.querySelector(".aluno_data_2");
+    let busc_1 = document.querySelector("#busc_1");
+    let calc_2 = document.querySelector("#calc_2");
+
+    aluno_2.setAttribute("hidden", "True");
+    matricula_1.removeAttribute("hidden")
+    busc_1.removeAttribute("hidden")
+    calc_2.setAttribute("hidden","True")
 }
 
 
@@ -109,5 +165,5 @@ function q6(){
     salario = salario.value;
     desc = salario_liquido(salario)
 
-    at6.innerHTML = `<hr>Valor a ser descontado:R$:${desc}.<br>Saldo final: R$${salario-desc}`
+    at6.innerHTML = `<hr>Valor a ser descontado: R$${desc.toFixed(2)}<br>Saldo final: R$${salario-desc}`
 }

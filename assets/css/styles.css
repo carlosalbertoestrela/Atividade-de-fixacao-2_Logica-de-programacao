@@ -1,0 +1,20 @@
+body{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    border: solid 2px;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    background-color: rgb(135, 201, 228);
+    
+   
+    
+}
+
+@media screen and (max-width: 700px){
+    body{
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}

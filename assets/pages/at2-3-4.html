@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade-2</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
 </head>
 <body onload="get_p1(), get_p2()">
     <h1>Atividade de fixação 2</h1>
@@ -18,26 +20,53 @@
         <h3>Preencha os campos abaixo:</h3>
         <div class="at2_data">
             
-            <label>
+            <label class="matricula_1">
+                <p>1º Aluno</p> 
+                Matricula:
+                <input type="text" name="matricula" id="at2_matricula_1">
+            </label>
+            <label hidden class="matricula_2">
+                <p>2º Aluno</p>
                 Matricula: 
-                <input type="text" name="matricula" id="at2_matricula">
+                <input type="text" name="matricula" id="at2_matricula_2">
             </label>
-            <br>
             
-            <label>
-                Nota 1ª prova: 
-                <input type="text" name="nota1" id="at2_nota1">
-            </label>
-            <br>
             
-            <label>
-                Nota 2ª prova:
-                <input type="text" name="nota2" id="at2_nota2">
-            </label>
+            <div hidden class="aluno_data_1" >
+                <p>1º Aluno</p> 
+                <label >
+                    Nota 1ª prova: 
+                    <input type="text" name="nota1" id="at2_nota1_1">
+                </label>
+                <br>
+                
+                <label>
+                    Nota 2ª prova:
+                    <input type="text" name="nota2" id="at2_nota2_1">
+                </label>
+            </div>
+            <div hidden class="aluno_data_2" >
+                <label >
+                    Nota 1ª prova: 
+                    <input type="text" name="nota1" id="at2_nota1_2">
+                </label>
+                <br>
+                
+                <label>
+                    Nota 2ª prova:
+                    <input type="text" name="nota2" id="at2_nota2_2">
+                </label>
+            </div>
             <br>
-           <button onclick="q2()">Calcular</button>
 
-           <div class="at2_answer"></div>
+           <button id="calc_1" hidden onclick="q2_1(), mostrar_botao_1()">Calcular</button>
+           <button id="busc_1" onclick="esconder_botao_1()">Buscar</button>
+           
+           <button id="calc_2" hidden onclick="q2_2(), mostrar_botao_2()">Calcular</button>
+           <button id="busc_2" hidden onclick="esconder_botao_2()">Buscar</button>
+
+           <div class="at2_answer_1"></div>
+           <div class="at2_answer_2"></div>
             
 
         </div>
