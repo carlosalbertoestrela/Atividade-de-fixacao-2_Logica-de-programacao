@@ -13,14 +13,14 @@ function calcula_produto(n1,n2){
     return prod;
 }
 // At2
-// function calcula_media_ponderada(n1,p1,n2,p2){
-//     n1 = parseInt(n1);
-//     p1 = parseInt(p1);
-//     n2 = parseInt(n2);
-//     p2 = parseInt(p2);
-//     let mdp = (n1*p1 + n2*p2)/(p1+p2);
-//     return mdp.toFixed(1);
-// }
+function calcula_media_ponderada(n1,p1,n2,p2){
+    n1 = parseInt(n1);
+    p1 = parseInt(p1);
+    n2 = parseInt(n2);
+    p2 = parseInt(p2);
+    let mdp = (n1*p1 + n2*p2)/(p1+p2);
+    return mdp.toFixed(1);
+}
 
 // At3 - At4
 function calcula_media_ponderada_2(n1,p1,n2,p2){
@@ -69,7 +69,7 @@ function q1(){
 
 
 
-        // Atividade 2    
+        // Atividade 2, 3 e 4.   
 let peso1;
 let peso2;
 const get_p1 = () =>{ peso1 = prompt("Digite o peso da 1ª prova:");}
@@ -148,7 +148,6 @@ function mostrar_botao_2(){
     busc_1.removeAttribute("hidden")
     calc_2.setAttribute("hidden","True")
 }
-
 
 function q5(){
     let at5 = document.querySelector(".at5_answer")
