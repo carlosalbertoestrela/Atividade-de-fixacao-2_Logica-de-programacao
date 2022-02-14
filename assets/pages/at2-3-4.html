@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade-2</title>
+</head>
+<body onload="get_p1(), get_p2()">
+    <h1>Atividade de fixação 2</h1>
+    <br><hr>
+    <script src="../js/script.js"></script>
+
+    <section id="at2_container">
+
+        <h2>2 - Calcule a média ponderada</h2>
+        <hr>
+        <h3>Preencha os campos abaixo:</h3>
+        <div class="at2_data">
+            
+            <label>
+                Matricula: 
+                <input type="text" name="matricula" id="at2_matricula">
+            </label>
+            <br>
+            
+            <label>
+                Nota 1ª prova: 
+                <input type="text" name="nota1" id="at2_nota1">
+            </label>
+            <br>
+            
+            <label>
+                Nota 2ª prova:
+                <input type="text" name="nota2" id="at2_nota2">
+            </label>
+            <br>
+           <button onclick="q2()">Calcular</button>
+
+           <div class="at2_answer"></div>
+            
+
+        </div>
+
+    </section>
+    
+
+
+    <footer>
+        <hr>
+        <button id="preview"><a href="./at1.html">Voltar</a></button>
+        <button id="start"><a href="../../index.html">Inicio</a></button>
+        <button id="next"><a href="./at5.html">Próximo</a></button>
+    </footer>
+</body>
+</html>
